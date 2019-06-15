@@ -25,7 +25,7 @@ namespace WebApplication2.models.Services
 
             var msg = new SendGridMessage();
 
-            msg.SetFrom("noreply@JoshPercival.Inquiries", "Admin");
+            msg.SetFrom("noreply@JoshPercival.Inquiries", "Josh Percival Laborworks");
             msg.AddTo(email);
             msg.SetSubject(subject);
             msg.AddContent(MimeType.Html, htmlMessage);

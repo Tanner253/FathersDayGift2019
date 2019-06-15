@@ -11,19 +11,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- Bootstrap core CSS -->
     <link href="~/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="~/css/scrolling-nav.css" rel="stylesheet">
     <link href="~/css/Site.css" rel="stylesheet" />
-    <title></title>
+
 </head>
 <body id="page-top">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Innovation</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -52,13 +52,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <h2>About this page</h2>
-                    <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
+                    <h2>A Little about me</h2>
+                    <p class="lead">Hello my name is Josh Percival and i am...</p>
                     <ul>
-                        <li>Clickable nav links that smooth scroll to page sections</li>
-                        <li>Responsive behavior when clicking nav links perfect for a one page website</li>
-                        <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
-                        <li>Minimal custom CSS so you are free to explore your own unique design options</li>
+                        <li>Flexible hours</li>
+                        <li>20 Years of expierience</li>
+                        <li>Im an awesome father</li>
+                        <li>Amazing loyal and dedicated worker</li>
                     </ul>
                 </div>
             </div>
@@ -79,45 +79,40 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <h2>Contact us</h2>
-                    <form method="post" enctype="multipart/form-data">
-
-                        @*First name:<br />
-                        <input type="text" name="FirstName" /><br />
-                        Last name:<br />
-                        <input type="text" name="LastName" /><br />
-                        Email:<br />
-                        <input type="email" name="Email" /><br />
-                        Message:<br />
-                        <input type="text" name="Message" />*@
+                    <div class="col-md-4">
+                        <form method="post" enctype="multipart/form-data">
 
 
 
 
 
-                        <div asp-validation-summary="All" class="Text-danger"></div>
-        <div class="FormElements">
-            <label asp-for="Email"></label>
-            <input asp-for="Email" />
-            <span asp-validation-for="Email" class="text-danger"></span>
-        </div>
-        <div class="FormElements">
 
-            <label asp-for="FirstName"></label>
-            <input asp-for="FirstName" />
-            <span asp-validation-for="FirstName" class="text-danger"></span>
-        </div>
-        <div class="FormElements">
-            <label asp-for="LastName"></label>
-            <input asp-for="LastName" />
-            <span asp-validation-for="LastName" class="text-danger"></span>
-        </div>
-        <div class="FormElements">
-            <label asp-for="Message"></label>
-            <input asp-for="Message" />
-            <span asp-validation-for="Message" class="text-danger"></span>
-        </div>
-                        <button type="submit">Send Email</button>
-                    </form>
+
+                            <div asp-validation-summary="All" class="Text-danger"></div>
+                            <div class="Form-group">
+                                <label asp-for="Email" class="control-label"></label>
+                                <input asp-for="Email" class="form-control" />
+                                <span asp-validation-for="Email" ></span>
+                            </div>
+                            <div class="Form-group">
+
+                                <label asp-for="FirstName"></label>
+                                <input asp-for="FirstName" class="form-control"/>
+                                <span asp-validation-for="FirstName" ></span>
+                            </div>
+                            <div class="Form-group">
+                                <label asp-for="LastName"></label>
+                                <input asp-for="LastName" class="form-control"/>
+                                <span asp-validation-for="LastName" ></span>
+                            </div>
+                            <div class="Form-group">
+                                <label asp-for="Message"></label>
+                                <textarea asp-for="Message" class="form-control"></textarea>
+                                <span asp-validation-for="Message" ></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Email</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -134,7 +129,11 @@
     <script src="~/Scripts/jquery-3.3.1.js"></script>
 
     <script src="~/Scripts/scrolling-nav.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
 
- 
