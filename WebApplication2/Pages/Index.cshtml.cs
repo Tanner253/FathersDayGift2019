@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -10,21 +11,35 @@ using WebApplication2.models.ViewModels;
 
 namespace WebApplication2.Pages
 {
-    public class IndexModel : PageModel, IEmailSender
+    public class IndexModel : PageModel
     {
-        private EmailSender _emailSender;
+        private IEmailSender _emailSender;
 
-        public IndexModel(EmailSender emailSender)
+        public IndexModel(IEmailSender emailSender)
         {
             _emailSender = emailSender;
         }
 
-        public void OnPost()
-        {
+        [Required]
+        [BindProperty]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
 
-        }
+        [Required]
+        [BindProperty]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
 
-        public async Task EmailSubmit(EmailViewModel evm)
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        [MinLength(15)]
+        [MaxLength(2048)]
+        [Required]
+        public string Message { get; set; }
+
+        public async Task OnPost(EmailViewModel evm)
         {
             if (ModelState.IsValid)
             {
@@ -35,9 +50,9 @@ namespace WebApplication2.Pages
                     LastName = evm.LastName,
                     Message = evm.Message
                 };
+                await _emailSender.SendEmailAsync("Percivaltanner@gmail.com", $"{email.FirstName} {email.LastName}", $"{email.Message} {email.Email}");
             }
             
-            await _emailSender.SendEmailAsync("Percivaltanner@gmail.com", $"{evm.FirstName} {evm.LastName}", $"{evm.Message} {evm.Email}");
         }
 
         public Task SendEmailAsync(string email, string subject, string htmlMessage)
