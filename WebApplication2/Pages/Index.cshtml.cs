@@ -50,7 +50,7 @@ namespace WebApplication2.Pages
                     LastName = evm.LastName,
                     Message = evm.Message
                 };
-                await _emailSender.SendEmailAsync("Percivaltanner@gmail.com", $"{email.FirstName} {email.LastName}", $" <p>  Sent from: { email.Email}</p></br> <p> { email.Message} </p>");
+                await _emailSender.SendEmailAsync("Percival20@gmail.com", $"{email.FirstName} {email.LastName}", $" <p>  Sent from: { email.Email}</p></br> <p> { email.Message} </p>");
             }
             
         }
