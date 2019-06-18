@@ -82,27 +82,28 @@
                     <h2>Contact us</h2>
                     <div class="col-md-4">
                         <form method="post" enctype="multipart/form-data">
+
                             <div asp-validation-summary="All" class="Text-danger"></div>
                             <div class="Form-group">
                                 <label asp-for="Email" class="control-label"></label>
                                 <input asp-for="Email" class="form-control" />
-                                <span asp-validation-for="Email" ></span>
+                                <span asp-validation-for="Email"></span>
                             </div>
                             <div class="Form-group">
 
                                 <label asp-for="FirstName"></label>
-                                <input asp-for="FirstName" class="form-control"/>
-                                <span asp-validation-for="FirstName" ></span>
+                                <input asp-for="FirstName" class="form-control" />
+                                <span asp-validation-for="FirstName"></span>
                             </div>
                             <div class="Form-group">
                                 <label asp-for="LastName"></label>
-                                <input asp-for="LastName" class="form-control"/>
-                                <span asp-validation-for="LastName" ></span>
+                                <input asp-for="LastName" class="form-control" />
+                                <span asp-validation-for="LastName"></span>
                             </div>
                             <div class="Form-group">
                                 <label asp-for="Message"></label>
                                 <textarea asp-for="Message" class="form-control"></textarea>
-                                <span asp-validation-for="Message" ></span>
+                                <span asp-validation-for="Message"></span>
                             </div>
                             <button type="submit" class="btn btn-primary">Send Email</button>
                         </form>
@@ -119,11 +120,9 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="~/Scripts/jquery-3.3.1.js"></script>
-    <script src="~/Scripts/jquery-3.3.1.js"></script>
-
-    <script src="~/Scripts/scrolling-nav.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="~/js/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/js/scrolling-nav.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 
